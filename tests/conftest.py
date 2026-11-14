@@ -66,3 +66,11 @@ def built(db):
     pipeline.load(o, returns, people)
     run_sql_dir(config.SQL_DIR, skip=("00_staging.sql",))
     return stats
+
+
+@pytest.fixture
+def uci_db(db):
+    """Empty test database with the UCI schema, log table and daily view."""
+    from retailpulse import ingest
+    ingest.setup()
+    return db

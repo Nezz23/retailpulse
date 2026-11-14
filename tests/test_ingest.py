@@ -21,12 +21,6 @@ ROWS = lines([SALE, SALE,                                       # exact repeat: 
               ("500004", "22423", 1, "2010-01-05 09:00", 12.5, None)])
 
 
-@pytest.fixture
-def uci_db(db):
-    ingest.setup()
-    return db
-
-
 def test_repeated_lines_and_reruns_are_loaded_once(uci_db):
     first = ingest.load_window(ROWS, DAY1)
     assert (first["rows_in"], first["rows_new"], first["rows_duplicate"]) == (4, 3, 1)

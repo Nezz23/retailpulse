@@ -1,0 +1,185 @@
+{
+  "source": "UCI Online Retail II (real), net product revenue in GBP",
+  "history": [
+    "2009-12-01",
+    "2011-12-08"
+  ],
+  "forecast_start": "2011-12-09",
+  "backtest": {
+    "origins": [
+      "2010-12-03",
+      "2010-12-31",
+      "2011-01-28",
+      "2011-02-25",
+      "2011-03-25",
+      "2011-04-22",
+      "2011-05-20",
+      "2011-06-17",
+      "2011-07-15",
+      "2011-08-12",
+      "2011-09-09"
+    ],
+    "horizon_days": 90,
+    "note": "origins 28 days apart, so 90-day test windows overlap and errors are correlated"
+  },
+  "scores": {
+    "naive_weekly": {
+      "30": {
+        "wape_pct": 44.85,
+        "mae": 9653.44,
+        "total_error_pct": -10.81,
+        "coverage80_pct": 83.94,
+        "coverage95_pct": 94.85
+      },
+      "60": {
+        "wape_pct": 47.4,
+        "mae": 10701.47,
+        "total_error_pct": -11.13,
+        "coverage80_pct": 81.06,
+        "coverage95_pct": 93.94
+      },
+      "90": {
+        "wape_pct": 49.77,
+        "mae": 11917.36,
+        "total_error_pct": -12.37,
+        "coverage80_pct": 77.47,
+        "coverage95_pct": 91.82
+      }
+    },
+    "naive_last_year": {
+      "30": {
+        "wape_pct": 36.48,
+        "mae": 7931.75,
+        "total_error_pct": -2.9,
+        "coverage80_pct": 84.24,
+        "coverage95_pct": 91.82
+      },
+      "60": {
+        "wape_pct": 36.09,
+        "mae": 8326.24,
+        "total_error_pct": -2.93,
+        "coverage80_pct": 83.18,
+        "coverage95_pct": 90.61
+      },
+      "90": {
+        "wape_pct": 35.15,
+        "mae": 8555.05,
+        "total_error_pct": -2.86,
+        "coverage80_pct": 82.73,
+        "coverage95_pct": 90.2
+      }
+    },
+    "holt_winters": {
+      "30": {
+        "wape_pct": 44.3,
+        "mae": 9479.16,
+        "total_error_pct": -13.3,
+        "coverage80_pct": 86.97,
+        "coverage95_pct": 94.85
+      },
+      "60": {
+        "wape_pct": 46.92,
+        "mae": 10526.8,
+        "total_error_pct": -13.63,
+        "coverage80_pct": 89.39,
+        "coverage95_pct": 96.82
+      },
+      "90": {
+        "wape_pct": 49.37,
+        "mae": 11736.9,
+        "total_error_pct": -14.95,
+        "coverage80_pct": 90.61,
+        "coverage95_pct": 97.47
+      }
+    },
+    "sarimax_fourier": {
+      "30": {
+        "wape_pct": 32.28,
+        "mae": 7046.34,
+        "total_error_pct": -2.36,
+        "coverage80_pct": 88.18,
+        "coverage95_pct": 93.94
+      },
+      "60": {
+        "wape_pct": 32.37,
+        "mae": 7511.48,
+        "total_error_pct": -2.06,
+        "coverage80_pct": 85.61,
+        "coverage95_pct": 94.24
+      },
+      "90": {
+        "wape_pct": 32.41,
+        "mae": 8003.53,
+        "total_error_pct": -2.48,
+        "coverage80_pct": 83.64,
+        "coverage95_pct": 93.84
+      }
+    },
+    "combination": {
+      "30": {
+        "wape_pct": 31.29,
+        "mae": 6854.06,
+        "total_error_pct": -2.63,
+        "coverage80_pct": 89.7,
+        "coverage95_pct": 94.24
+      },
+      "60": {
+        "wape_pct": 31.13,
+        "mae": 7233.07,
+        "total_error_pct": -2.49,
+        "coverage80_pct": 88.18,
+        "coverage95_pct": 93.79
+      },
+      "90": {
+        "wape_pct": 30.65,
+        "mae": 7533.75,
+        "total_error_pct": -2.67,
+        "coverage80_pct": 86.97,
+        "coverage95_pct": 93.64
+      }
+    }
+  },
+  "year_end_fold": {
+    "naive_weekly": {
+      "wape_pct": 103.16,
+      "total_error_pct": 96.24
+    },
+    "naive_last_year": {
+      "wape_pct": 38.07,
+      "total_error_pct": 1.19
+    },
+    "holt_winters": {
+      "wape_pct": 102.86,
+      "total_error_pct": 96.87
+    },
+    "sarimax_fourier": {
+      "wape_pct": 44.35,
+      "total_error_pct": 18.67
+    },
+    "combination": {
+      "wape_pct": 36.22,
+      "total_error_pct": 9.93
+    }
+  },
+  "selected": "combination",
+  "selection_rule": "lowest mean 90-day WAPE in the backtest",
+  "baseline": "naive_weekly",
+  "beats_baseline_pct": 19.12,
+  "totals": {
+    "next_30_days": {
+      "forecast": 592436.02,
+      "backtest_low": 549923.8,
+      "backtest_high": 725719.78
+    },
+    "next_60_days": {
+      "forecast": 1310309.12,
+      "backtest_low": 1204561.42,
+      "backtest_high": 1488468.14
+    },
+    "next_90_days": {
+      "forecast": 1967508.07,
+      "backtest_low": 1789774.5,
+      "backtest_high": 2198453.81
+    }
+  }
+}
