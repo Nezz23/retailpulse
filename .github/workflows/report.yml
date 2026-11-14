@@ -1,0 +1,27 @@
+name: weekly-report
+# Builds the weekly executive report from the committed snapshots (no database needed) and attaches it to the run.
+on:
+  schedule:
+    - cron: "0 7 * * 1"          # Mondays 07:00 UTC; change here to reschedule
+  workflow_dispatch:
+    inputs:
+      uci_week:
+        description: "Online Retail II week ending (a Sunday, YYYY-MM-DD). Blank = latest complete week."
+        required: false
+      superstore_week:
+        description: "Superstore week ending (a Sunday, YYYY-MM-DD). Blank = latest complete week."
+        required: false
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - run: pip install -r requirements.txt
+      - run: python -m retailpulse.report
+        env:
+          REPORT_UCI_WEEK: ${{ inputs.uci_week }}
+          REPORT_SUPERSTORE_WEEK: ${{ inputs.superstore_week }}
+      - uses: actions/upload-artifact@v4
+        with: {name: weekly-report, path: reports/*.html}

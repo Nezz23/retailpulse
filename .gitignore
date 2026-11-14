@@ -5,3 +5,4 @@ __pycache__/
 data/raw/
 tableau/RetailPulse.twb
 *.twbr
+reports/
