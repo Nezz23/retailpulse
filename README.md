@@ -1,10 +1,12 @@
 # RetailPulse: Retail Profitability Intelligence for Tableau
 
-**A Tableau-first BI platform that explains why profit lags revenue.** A reproducible Python pipeline loads retail transactions into a PostgreSQL star schema. Twelve SQL analytical views and a statistics layer feed Tableau-ready extracts, 37 calculated fields (LOD expressions, table calculations, parameters) and a six-dashboard specification.
+**A Tableau-first BI platform that explains why profit lags revenue.** A reproducible Python pipeline loads retail transactions into a PostgreSQL star schema. Twelve SQL analytical views and a statistics layer feed a published Tableau **Executive Overview** dashboard with year-over-year KPIs, parameter-driven metric switching and Top N ranking, and insight text computed from the data.
 
 > **Data honesty up front:** the dataset is **Tableau's official Sample Superstore, a synthetic dataset**. It is the only well-known public retail dataset with recorded profit *and* discount fields at line level. Every finding below describes this sample, not a real company.
 
-> **Tableau status:** the data sources, the calculations, and a starter workbook (`tableau/RetailPulse.twb`) are generated and checked by automated tests. **The workbook has not yet been opened in Tableau**, because Tableau isn't installed on the build machine. Dashboard screenshots and the Tableau Public link will be added once the dashboards are built from [`tableau/dashboard_spec.md`](tableau/dashboard_spec.md).
+**Live dashboard:** [RetailPulse Executive Overview on Tableau Public](https://public.tableau.com/app/profile/neha.kothavade/viz/RetailPulse_ExecutiveOverview_approved/ExecutiveOverview)
+
+![Executive Overview](docs/screenshots/executive_overview.png)
 
 ## The business problem
 
@@ -66,9 +68,7 @@ flowchart LR
   V --> EX[Tableau extracts<br/>data/tableau/*.csv]
   ST & FC --> INS[Evidence-typed insights]
   INS --> EX
-  CF[tableau.py<br/>37 calcs · 4 parameters] --> TWB[RetailPulse.twb<br/>+ calculated_fields.md]
-  EX --> TWB
-  TWB --> TAB[Tableau: 6 dashboards<br/>per dashboard_spec.md]
+  EX --> TAB[Tableau Public<br/>Executive Overview<br/>tableau/RetailPulse.twbx]
 ```
 
 **Star schema**
@@ -109,22 +109,22 @@ flowchart LR
 
 ## Tableau layer
 
-| Artifact | What it is |
+**Executive Overview** ([`tableau/RetailPulse.twbx`](tableau/RetailPulse.twbx), 1400×860, no scrolling) reads `data/tableau/sales_wide.csv` (10,192 lines).
+
+| Element | How it is built |
 |---|---|
-| [`data/tableau/*.csv`](data/tableau) | 15 extracts. `sales_wide.csv` (10,192 lines) is the main data source; the others are pre-aggregated views, the forecast, and the insights |
-| [`tableau/calculated_fields.md`](tableau/calculated_fields.md) | **37 calculated fields:** 7 LOD expressions (e.g. `{FIXED [customer_id] : MIN([order_date])}` for cohorts, `{FIXED : SUM([profit]) / SUM([sales])}` as the company benchmark), 6 table calculations (`LOOKUP` YoY, `WINDOW_AVG`, `RUNNING_SUM`/`TOTAL` Pareto, `RANK_UNIQUE` top-N), and **4 parameters** (Metric, Top N, Discount Cap, Selected Region) |
-| [`tableau/field_dictionary.md`](tableau/field_dictionary.md) | Every extract column, defined |
-| [`tableau/dashboard_spec.md`](tableau/dashboard_spec.md) | Six dashboards: wireframes, chart specs, interactions (parameter, filter and highlight actions, drill-down), design tokens (navy and neutral, colour-blind-checked categorical palette), and a feature checklist |
-| `tableau/RetailPulse.twb` | Generated starter workbook: both data sources, all parameters and calculations. **Unverified until opened in Tableau** |
+| Controls | **Year** and **Metric** (Revenue / Profit / Profit Margin / Orders) parameters, **Top N** parameter (3–17), **Region** filter applied as a context filter to every sheet |
+| 4 KPI cards | Revenue, profit, margin and orders for the selected year, each with change vs the prior year and a monthly sparkline |
+| Trend | Selected metric by month, selected year vs prior year |
+| Top N ranking | Native Top N filter driven by the parameter; bars turn orange when the sub-category lost money that year |
+| Heatmap | Profit margin by region × segment on a diverging scale centred on 0% |
+| Insights | Three sentences built from calculated fields, so every number updates with the filters: growth vs margin, deep-discount revenue and profit, count of loss-making sub-categories |
 
-All of these are generated from one definition (`retailpulse/tableau.py`). Tests fail if a formula references a field that doesn't exist, if a calc name collides with a column (Tableau names are case-insensitive), or if an extract column is missing from the field dictionary.
+Key calculations: margin as `SUM([profit]) / SUM([sales])` (a ratio of sums), current- vs prior-year measures keyed to the Year parameter, a metric switch via `CASE [Metric]`, and a `{FIXED [sub_category] : …}` LOD to count loss-making sub-categories.
 
-**Finishing the workbook** (manual, about 2–3 hours):
+**Checked against PostgreSQL:** for 2026 (all regions) the dashboard shows revenue $745,568, profit $95,926, margin 12.9% (−0.6 pp), 1,723 orders (+28.6%), 14.5% of revenue at discounts above 20% losing $47.8K, and 4 of 17 sub-categories unprofitable. All of these match the SQL views; the same checks were repeated for 2025 and for the West region.
 
-1. Install the free [Tableau Public](https://public.tableau.com/app/discover) app, e.g. `brew install --cask tableau-public`.
-2. Open `tableau/RetailPulse.twb`.
-3. Follow the *Assembly* section of `dashboard_spec.md`.
-4. Save to Tableau Public.
+[`tableau/calculated_fields.md`](tableau/calculated_fields.md), [`field_dictionary.md`](tableau/field_dictionary.md) and [`dashboard_spec.md`](tableau/dashboard_spec.md) are the original design spec (six dashboards). Only the Executive Overview has been built; the other five are future work.
 
 ## Forecasting (`results/forecast.json`)
 
@@ -182,7 +182,7 @@ CI runs them against a PostgreSQL 17 service container and builds the Docker ima
 
 ## Future improvements
 
-- Build and publish the six dashboards to Tableau Public, then add screenshots and the link here.
+- Build the remaining dashboards from `dashboard_spec.md` (profitability and revenue leakage, customer and product intelligence).
 - Re-run the pipeline on a real retailer's data with a cost feed (the schema and tests are dataset-agnostic past the loader).
 - Add a designed discount-cap experiment and an uplift analysis.
 - Add a Tableau Hyper extract (`tableauhyperapi`) for faster workbooks.

@@ -217,7 +217,7 @@ def write_workbook(path: Path = TABLEAU_DOCS / "RetailPulse.twb") -> None:
         calcs.append(_calc_xml(i, Calc(c.name, formula, c.datatype, c.role, c.kind, c.purpose, c.dashboards),
                                param_ids))
     xml = ("<?xml version='1.0' encoding='utf-8' ?>\n"
-           "<workbook source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>"
+           "<workbook original-version='18.1' source-build='2026.3.0 (20263.26.1022.1645)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>"
            "<datasources>"
            f"<datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>{params}</datasource>"
            + _textscan_datasource("federated.sales_wide", "Sales lines", config.TABLEAU_DIR / "sales_wide.csv",
