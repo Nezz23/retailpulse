@@ -1,0 +1,36 @@
+{
+  "train": [
+    "2023-01-01",
+    "2025-12-01"
+  ],
+  "test": [
+    "2026-01-01",
+    "2026-12-01"
+  ],
+  "holdout_scores": {
+    "seasonal_naive": {
+      "mae": 15793.23,
+      "mape_pct": 24.44,
+      "annual_total_error_pct": -17.66,
+      "coverage80_pct": 66.7,
+      "coverage95_pct": 66.7
+    },
+    "holt_winters": {
+      "mae": 14030.5,
+      "mape_pct": 23.25,
+      "annual_total_error_pct": -20.06,
+      "coverage80_pct": 66.7,
+      "coverage95_pct": 91.7
+    },
+    "sarima": {
+      "mae": 15134.54,
+      "mape_pct": 28.22,
+      "annual_total_error_pct": 5.91,
+      "coverage80_pct": 75.0,
+      "coverage95_pct": 100.0
+    }
+  },
+  "selected": "holt_winters",
+  "selection_rule": "lowest holdout MAPE",
+  "next_12_months_total": 735154.02
+}

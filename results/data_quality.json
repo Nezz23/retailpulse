@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "rows": 10194,
+    "columns": 21,
+    "order_date_range": [
+      "2023-01-03",
+      "2026-12-30"
+    ],
+    "missing_values": {},
+    "duplicate_row_ids": 0,
+    "exact_duplicate_lines": 2,
+    "orders": 5111,
+    "customers": 804,
+    "product_ids": 1862,
+    "product_ids_with_several_names": 32,
+    "orders_with_several_customers": 2,
+    "loss_making_lines": 1901,
+    "discount_levels": [
+      0.0,
+      0.1,
+      0.15,
+      0.2,
+      0.3,
+      0.32,
+      0.4,
+      0.45,
+      0.5,
+      0.6,
+      0.7,
+      0.8
+    ]
+  },
+  "normalize": {
+    "exact_duplicates_removed": 2,
+    "rows_out": 10192
+  },
+  "business_rule_violations": {
+    "ship date before order date": 0,
+    "non-positive sales": 0,
+    "non-positive quantity": 0,
+    "discount outside [0, 1)": 0,
+    "negative implied cost (profit above sales)": 0
+  },
+  "quality_checks": {
+    "fact rows reconcile to staging": true,
+    "sales reconcile to staging": true,
+    "profit reconciles to staging": true,
+    "every order date is in dim_date": true,
+    "every region has a manager": true,
+    "gross sales = sales + discount amount": true,
+    "order totals equal line totals": true
+  },
+  "mart_counts": {
+    "fct_sales": 10192,
+    "fct_orders": 5111,
+    "dim_customer": 804,
+    "dim_product": 1894,
+    "dim_geography": 655,
+    "dim_date": 1826
+  }
+}

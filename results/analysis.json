@@ -1,0 +1,319 @@
+{
+  "margin_change": [
+    {
+      "year": 2024.0,
+      "margin_prev_pct": 10.46,
+      "margin_pct": 13.11,
+      "change_pp": 2.65,
+      "ci95_pp": [
+        -2.27,
+        7.52
+      ],
+      "share_of_bootstrap_below_zero": 0.152,
+      "orders_resampled": 2000
+    },
+    {
+      "year": 2025.0,
+      "margin_prev_pct": 13.11,
+      "margin_pct": 13.46,
+      "change_pp": 0.35,
+      "ci95_pp": [
+        -5.06,
+        5.06
+      ],
+      "share_of_bootstrap_below_zero": 0.466,
+      "orders_resampled": 2000
+    },
+    {
+      "year": 2026.0,
+      "margin_prev_pct": 13.46,
+      "margin_pct": 12.87,
+      "change_pp": -0.6,
+      "ci95_pp": [
+        -5.56,
+        4.84
+      ],
+      "share_of_bootstrap_below_zero": 0.584,
+      "orders_resampled": 2000
+    }
+  ],
+  "discount_association": {
+    "lines": 10192,
+    "spearman_rho": -0.647,
+    "spearman_p": 0.0,
+    "slope_pp_per_10pt_discount_raw": -19.49,
+    "slope_pp_per_10pt_discount_controlled": -19.89,
+    "slope_ci95_controlled": [
+      -20.3,
+      -19.47
+    ],
+    "r2_controlled": 0.816,
+    "controls": [
+      "sub_category",
+      "region",
+      "segment"
+    ],
+    "lowest_discount_level_with_negative_margin": 0.3,
+    "margin_by_discount_level": [
+      {
+        "discount": 0.0,
+        "lines": 4924.0,
+        "margin_pct": 29.56
+      },
+      {
+        "discount": 0.1,
+        "lines": 96.0,
+        "margin_pct": 16.56
+      },
+      {
+        "discount": 0.15,
+        "lines": 52.0,
+        "margin_pct": 5.15
+      },
+      {
+        "discount": 0.2,
+        "lines": 3706.0,
+        "margin_pct": 11.77
+      },
+      {
+        "discount": 0.3,
+        "lines": 229.0,
+        "margin_pct": -10.08
+      },
+      {
+        "discount": 0.32,
+        "lines": 27.0,
+        "margin_pct": -16.5
+      },
+      {
+        "discount": 0.4,
+        "lines": 207.0,
+        "margin_pct": -19.82
+      },
+      {
+        "discount": 0.45,
+        "lines": 11.0,
+        "margin_pct": -45.45
+      },
+      {
+        "discount": 0.5,
+        "lines": 66.0,
+        "margin_pct": -34.8
+      },
+      {
+        "discount": 0.6,
+        "lines": 149.0,
+        "margin_pct": -86.75
+      },
+      {
+        "discount": 0.7,
+        "lines": 424.0,
+        "margin_pct": -98.76
+      },
+      {
+        "discount": 0.8,
+        "lines": 301.0,
+        "margin_pct": -180.01
+      }
+    ]
+  },
+  "margin_drivers": {
+    "year": 2026,
+    "sub_categories": [
+      {
+        "sub_category": "Machines",
+        "margin_prev_pct": 5.2,
+        "margin_pct": -6.45,
+        "discount_rate_prev_pct": 27.59,
+        "discount_rate_pct": 35.75,
+        "revenue": 43887.88,
+        "margin_change_pp": -11.65,
+        "discount_rate_change_pp": 8.16
+      },
+      {
+        "sub_category": "Binders",
+        "margin_prev_pct": 20.64,
+        "margin_pct": 10.78,
+        "discount_rate_prev_pct": 33.92,
+        "discount_rate_pct": 41.3,
+        "revenue": 73651.27,
+        "margin_change_pp": -9.86,
+        "discount_rate_change_pp": 7.38
+      },
+      {
+        "sub_category": "Tables",
+        "margin_prev_pct": -4.85,
+        "margin_pct": -13.27,
+        "discount_rate_prev_pct": 23.06,
+        "discount_rate_pct": 28.13,
+        "revenue": 60999.2,
+        "margin_change_pp": -8.42,
+        "discount_rate_change_pp": 5.07
+      },
+      {
+        "sub_category": "Fasteners",
+        "margin_prev_pct": 31.35,
+        "margin_pct": 27.57,
+        "discount_rate_prev_pct": 7.8,
+        "discount_rate_pct": 1.4,
+        "revenue": 6161.71,
+        "margin_change_pp": -3.78,
+        "discount_rate_change_pp": -6.4
+      },
+      {
+        "sub_category": "Bookcases",
+        "margin_prev_pct": 0.48,
+        "margin_pct": -2.17,
+        "discount_rate_prev_pct": 20.3,
+        "discount_rate_pct": 21.13,
+        "revenue": 30354.07,
+        "margin_change_pp": -2.65,
+        "discount_rate_change_pp": 0.83
+      },
+      {
+        "sub_category": "Appliances",
+        "margin_prev_pct": 20.39,
+        "margin_pct": 18.36,
+        "discount_rate_prev_pct": 12.8,
+        "discount_rate_pct": 12.66,
+        "revenue": 43111.16,
+        "margin_change_pp": -2.03,
+        "discount_rate_change_pp": -0.13
+      },
+      {
+        "sub_category": "Envelopes",
+        "margin_prev_pct": 43.71,
+        "margin_pct": 42.67,
+        "discount_rate_prev_pct": 5.61,
+        "discount_rate_pct": 7.86,
+        "revenue": 3378.57,
+        "margin_change_pp": -1.04,
+        "discount_rate_change_pp": 2.24
+      },
+      {
+        "sub_category": "Supplies",
+        "margin_prev_pct": -4.9,
+        "margin_pct": -5.87,
+        "discount_rate_prev_pct": 10.4,
+        "discount_rate_pct": 9.67,
+        "revenue": 16075.66,
+        "margin_change_pp": -0.98,
+        "discount_rate_change_pp": -0.73
+      },
+      {
+        "sub_category": "Paper",
+        "margin_prev_pct": 43.85,
+        "margin_pct": 43.49,
+        "discount_rate_prev_pct": 6.7,
+        "discount_rate_pct": 7.55,
+        "revenue": 28173.53,
+        "margin_change_pp": -0.35,
+        "discount_rate_change_pp": 0.85
+      },
+      {
+        "sub_category": "Storage",
+        "margin_prev_pct": 10.58,
+        "margin_pct": 10.48,
+        "discount_rate_prev_pct": 6.49,
+        "discount_rate_pct": 6.97,
+        "revenue": 70273.81,
+        "margin_change_pp": -0.1,
+        "discount_rate_change_pp": 0.49
+      },
+      {
+        "sub_category": "Furnishings",
+        "margin_prev_pct": 14.28,
+        "margin_pct": 14.41,
+        "discount_rate_prev_pct": 15.19,
+        "discount_rate_pct": 14.65,
+        "revenue": 29927.28,
+        "margin_change_pp": 0.12,
+        "discount_rate_change_pp": -0.54
+      },
+      {
+        "sub_category": "Phones",
+        "margin_prev_pct": 12.03,
+        "margin_pct": 12.26,
+        "discount_rate_prev_pct": 17.73,
+        "discount_rate_pct": 17.47,
+        "revenue": 105668.39,
+        "margin_change_pp": 0.23,
+        "discount_rate_change_pp": -0.26
+      },
+      {
+        "sub_category": "Chairs",
+        "margin_prev_pct": 6.99,
+        "margin_pct": 7.94,
+        "discount_rate_prev_pct": 17.66,
+        "discount_rate_pct": 16.42,
+        "revenue": 98032.38,
+        "margin_change_pp": 0.95,
+        "discount_rate_change_pp": -1.23
+      },
+      {
+        "sub_category": "Art",
+        "margin_prev_pct": 23.91,
+        "margin_pct": 25.17,
+        "discount_rate_prev_pct": 7.04,
+        "discount_rate_pct": 7.49,
+        "revenue": 9022.7,
+        "margin_change_pp": 1.26,
+        "discount_rate_change_pp": 0.45
+      },
+      {
+        "sub_category": "Accessories",
+        "margin_prev_pct": 23.07,
+        "margin_pct": 26.14,
+        "discount_rate_prev_pct": 6.87,
+        "discount_rate_pct": 6.08,
+        "revenue": 59946.23,
+        "margin_change_pp": 3.08,
+        "discount_rate_change_pp": -0.79
+      },
+      {
+        "sub_category": "Copiers",
+        "margin_prev_pct": 35.77,
+        "margin_pct": 39.8,
+        "discount_rate_prev_pct": 16.92,
+        "discount_rate_pct": 11.28,
+        "revenue": 62916.67,
+        "margin_change_pp": 4.03,
+        "discount_rate_change_pp": -5.64
+      },
+      {
+        "sub_category": "Labels",
+        "margin_prev_pct": 39.9,
+        "margin_pct": 45.21,
+        "discount_rate_prev_pct": 11.05,
+        "discount_rate_pct": 5.14,
+        "revenue": 3987.03,
+        "margin_change_pp": 5.31,
+        "discount_rate_change_pp": -5.91
+      }
+    ],
+    "spearman_discount_change_vs_margin_change": -0.662,
+    "p_value": 0.0038
+  },
+  "concentration": {
+    "unprofitable_products": 304,
+    "products": 1894,
+    "unprofitable_products_loss": -77634.02,
+    "loss_as_pct_of_total_profit": 26.56,
+    "loss_making_states": [
+      "Texas",
+      "Ohio",
+      "Pennsylvania",
+      "Illinois",
+      "North Carolina",
+      "Colorado",
+      "Tennessee",
+      "Arizona",
+      "Florida",
+      "Oregon",
+      "New Brunswick",
+      "Nova Scotia"
+    ],
+    "loss_making_states_loss": -98361.56,
+    "loss_making_states_revenue_share_pct": 30.35
+  }
+}

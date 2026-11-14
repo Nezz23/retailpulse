@@ -1,0 +1,216 @@
+region,state,regional_manager,year,revenue,profit,margin_pct,discount_rate_pct,revenue_share_pct,profit_share_pct,loss_rank
+Central,Texas,Roxanne Rodriguez,2023,50625.18,-9135.01,-18.04,42.78,10.26,-17.68,1
+East,Pennsylvania,Chuck Magee,2023,20246.15,-2361.82,-11.67,36.72,4.10,-4.57,2
+East,Ohio,Chuck Magee,2023,13853.48,-2119.01,-15.30,36.53,2.81,-4.10,3
+Central,Illinois,Roxanne Rodriguez,2023,16202.71,-2043.74,-12.61,36.64,3.28,-3.96,4
+South,North Carolina,Fred Suzuki,2023,8620.74,-1415.10,-16.42,39.74,1.75,-2.74,5
+South,Florida,Fred Suzuki,2023,34248.26,-1412.76,-4.13,45.37,6.94,-2.73,6
+West,Arizona,Sadie Pawthorne,2023,8295.24,-903.20,-10.89,40.99,1.68,-1.75,7
+West,Oregon,Sadie Pawthorne,2023,4807.78,-135.40,-2.82,23.59,0.97,-0.26,8
+East,New Brunswick,Chuck Magee,2023,56.42,-18.54,-32.85,53.17,0.01,-0.04,9
+East,Nova Scotia,Chuck Magee,2023,132.71,-1.57,-1.18,44.43,0.03,0.00,10
+East,Prince Edward Island,Chuck Magee,2023,3.02,-0.60,-20.00,20.00,0.00,0.00,11
+West,British Columbia,Sadie Pawthorne,2023,1037.33,8.12,0.78,17.19,0.21,0.02,12
+East,Newfoundland and Labrador,Chuck Magee,2023,118.72,45.02,37.92,0.00,0.02,0.09,13
+Central,South Dakota,Roxanne Rodriguez,2023,162.15,48.76,30.07,0.00,0.03,0.09,14
+South,Tennessee,Fred Suzuki,2023,3051.51,50.03,1.64,26.10,0.62,0.10,15
+Central,Nebraska,Roxanne Rodriguez,2023,210.02,58.17,27.70,0.00,0.04,0.11,16
+West,Idaho,Sadie Pawthorne,2023,465.22,62.05,13.34,15.75,0.09,0.12,17
+East,New Hampshire,Chuck Magee,2023,504.48,108.60,21.53,0.00,0.10,0.21,18
+Central,Iowa,Roxanne Rodriguez,2023,1190.84,109.50,9.20,0.00,0.24,0.21,19
+West,Montana,Sadie Pawthorne,2023,424.49,129.85,30.59,6.60,0.09,0.25,20
+West,New Mexico,Sadie Pawthorne,2023,708.01,156.05,22.04,10.33,0.14,0.30,21
+West,Alberta,Sadie Pawthorne,2023,1996.01,180.67,9.05,16.39,0.40,0.35,22
+West,Nevada,Sadie Pawthorne,2023,2561.21,250.27,9.77,16.76,0.52,0.48,23
+East,Maine,Chuck Magee,2023,617.12,256.93,41.63,0.00,0.13,0.50,24
+Central,Kansas,Roxanne Rodriguez,2023,1319.79,266.20,20.17,0.00,0.27,0.52,25
+West,Colorado,Sadie Pawthorne,2023,6502.29,438.19,6.74,24.75,1.32,0.85,26
+Central,Missouri,Roxanne Rodriguez,2023,1648.03,444.26,26.96,0.00,0.33,0.86,27
+South,South Carolina,Fred Suzuki,2023,2270.86,466.42,20.54,0.00,0.46,0.90,28
+East,Maryland,Chuck Magee,2023,1701.25,485.00,28.51,0.00,0.34,0.94,29
+South,Mississippi,Fred Suzuki,2023,2055.16,545.53,26.54,0.00,0.42,1.06,30
+South,Louisiana,Fred Suzuki,2023,2534.92,606.80,23.94,0.00,0.51,1.17,31
+East,Connecticut,Chuck Magee,2023,2794.02,745.33,26.68,1.07,0.57,1.44,32
+Central,Oklahoma,Roxanne Rodriguez,2023,2639.35,762.07,28.87,0.00,0.53,1.48,33
+West,Utah,Sadie Pawthorne,2023,2943.69,822.66,27.95,4.60,0.60,1.59,34
+Central,Indiana,Roxanne Rodriguez,2023,2936.81,868.15,29.56,0.00,0.59,1.68,35
+East,Quebec,Chuck Magee,2023,2494.34,882.05,35.36,1.27,0.51,1.71,36
+East,Ontario,Chuck Magee,2023,3855.03,1009.75,26.19,7.42,0.78,1.95,37
+Central,Wisconsin,Roxanne Rodriguez,2023,4847.71,1106.74,22.83,0.00,0.98,2.14,38
+East,New Jersey,Chuck Magee,2023,4192.28,1244.20,29.68,0.00,0.85,2.41,39
+South,Alabama,Fred Suzuki,2023,6139.09,1250.73,20.37,0.00,1.24,2.42,40
+East,Delaware,Chuck Magee,2023,4786.03,1338.59,27.97,0.00,0.97,2.59,41
+South,Georgia,Fred Suzuki,2023,4540.10,1491.71,32.86,0.00,0.92,2.89,42
+East,Rhode Island,Chuck Magee,2023,5015.69,1563.93,31.18,3.19,1.02,3.03,43
+Central,Michigan,Roxanne Rodriguez,2023,6172.25,1817.11,29.44,0.86,1.25,3.52,44
+South,Arkansas,Fred Suzuki,2023,6302.69,2031.69,32.24,0.00,1.28,3.93,45
+East,Massachusetts,Chuck Magee,2023,9900.11,2060.97,20.82,3.73,2.01,3.99,46
+South,Kentucky,Fred Suzuki,2023,8280.46,2309.40,27.89,0.00,1.68,4.47,47
+South,Virginia,Fred Suzuki,2023,25802.05,5954.67,23.08,0.00,5.23,11.53,48
+Central,Minnesota,Roxanne Rodriguez,2023,15883.33,6237.36,39.27,0.00,3.22,12.07,49
+West,Washington,Sadie Pawthorne,2023,29871.58,6607.28,22.12,11.00,6.05,12.79,50
+West,California,Sadie Pawthorne,2023,91303.53,12637.95,13.84,13.19,18.50,24.46,51
+East,New York,Chuck Magee,2023,64788.49,13748.94,21.22,10.04,13.12,26.61,52
+East,Ohio,Chuck Magee,2024,16110.43,-5500.89,-34.14,48.18,3.41,-8.87,1
+East,Pennsylvania,Chuck Magee,2024,20510.82,-3900.35,-19.02,37.55,4.34,-6.29,2
+Central,Texas,Roxanne Rodriguez,2024,34454.96,-2516.18,-7.30,33.53,7.28,-4.06,3
+South,Tennessee,Fred Suzuki,2024,8366.04,-1924.13,-23.00,50.85,1.77,-3.10,4
+South,Florida,Fred Suzuki,2024,15177.45,-1758.80,-11.59,35.74,3.21,-2.84,5
+South,North Carolina,Fred Suzuki,2024,8558.30,-1248.12,-14.58,33.59,1.81,-2.01,6
+West,Colorado,Sadie Pawthorne,2024,4639.27,-1141.07,-24.60,41.93,0.98,-1.84,7
+Central,Illinois,Roxanne Rodriguez,2024,18578.06,-1009.50,-5.43,32.83,3.93,-1.63,8
+West,Oregon,Sadie Pawthorne,2024,4285.94,-112.09,-2.62,25.51,0.91,-0.18,9
+East,Nova Scotia,Chuck Magee,2024,58.36,-24.80,-42.50,60.00,0.01,-0.04,10
+East,New Brunswick,Chuck Magee,2024,56.42,-18.54,-32.85,53.17,0.01,-0.03,11
+East,Quebec,Chuck Magee,2024,45.04,18.23,40.47,0.00,0.01,0.03,12
+East,Maine,Chuck Magee,2024,106.08,32.27,30.42,0.00,0.02,0.05,13
+Central,Kansas,Roxanne Rodriguez,2024,170.31,76.03,44.64,0.00,0.04,0.12,14
+West,British Columbia,Sadie Pawthorne,2024,403.93,79.32,19.64,9.05,0.09,0.13,15
+East,Rhode Island,Chuck Magee,2024,1099.56,94.24,8.57,16.14,0.23,0.15,16
+South,Arkansas,Fred Suzuki,2024,443.61,103.01,23.22,0.00,0.09,0.17,17
+East,Ontario,Chuck Magee,2024,579.54,123.15,21.25,15.43,0.12,0.20,18
+South,Mississippi,Fred Suzuki,2024,302.16,123.20,40.77,0.00,0.06,0.20,19
+West,New Mexico,Sadie Pawthorne,2024,1192.87,148.72,12.47,18.93,0.25,0.24,20
+Central,Nebraska,Roxanne Rodriguez,2024,594.14,203.47,34.25,0.00,0.13,0.33,21
+West,Alberta,Sadie Pawthorne,2024,1317.22,225.00,17.08,15.11,0.28,0.36,22
+West,Arizona,Sadie Pawthorne,2024,9611.21,236.38,2.46,25.93,2.03,0.38,23
+West,Montana,Sadie Pawthorne,2024,935.58,237.55,25.39,18.12,0.20,0.38,24
+West,Idaho,Sadie Pawthorne,2024,1500.24,285.32,19.02,6.95,0.32,0.46,25
+South,Louisiana,Fred Suzuki,2024,917.80,288.13,31.39,0.00,0.19,0.46,26
+East,Connecticut,Chuck Magee,2024,1284.64,427.15,33.25,0.00,0.27,0.69,27
+West,Nevada,Sadie Pawthorne,2024,1948.46,468.05,24.02,1.41,0.41,0.75,28
+Central,Iowa,Roxanne Rodriguez,2024,1713.20,490.37,28.62,0.00,0.36,0.79,29
+Central,Oklahoma,Roxanne Rodriguez,2024,2808.34,660.04,23.50,0.00,0.59,1.06,30
+West,Utah,Sadie Pawthorne,2024,3993.32,669.35,16.76,0.75,0.84,1.08,31
+South,South Carolina,Fred Suzuki,2024,4147.62,863.90,20.83,0.00,0.88,1.39,32
+East,New Hampshire,Chuck Magee,2024,4345.03,900.79,20.73,9.41,0.92,1.45,33
+East,District of Columbia,Chuck Magee,2024,2670.19,974.31,36.49,0.00,0.56,1.57,34
+East,Vermont,Chuck Magee,2024,5120.10,1191.93,23.28,0.00,1.08,1.92,35
+South,Alabama,Fred Suzuki,2024,3891.97,1199.79,30.83,0.00,0.82,1.93,36
+East,New Jersey,Chuck Magee,2024,4105.09,1315.62,32.05,0.00,0.87,2.12,37
+East,Delaware,Chuck Magee,2024,6190.34,1608.87,25.99,1.36,1.31,2.59,38
+Central,Minnesota,Roxanne Rodriguez,2024,5724.19,1721.48,30.07,0.00,1.21,2.78,39
+East,Massachusetts,Chuck Magee,2024,6625.99,1955.67,29.52,2.80,1.40,3.15,40
+Central,Indiana,Roxanne Rodriguez,2024,6640.32,1990.13,29.97,0.00,1.40,3.21,41
+Central,Wisconsin,Roxanne Rodriguez,2024,8361.81,2042.51,24.43,0.00,1.77,3.29,42
+East,Maryland,Chuck Magee,2024,7843.11,2713.83,34.60,0.00,1.66,4.38,43
+Central,Missouri,Roxanne Rodriguez,2024,6985.21,2892.66,41.41,0.00,1.48,4.66,44
+South,Kentucky,Fred Suzuki,2024,7673.56,2921.92,38.08,0.00,1.62,4.71,45
+South,Virginia,Fred Suzuki,2024,10543.42,2985.79,28.32,0.00,2.23,4.81,46
+South,Georgia,Fred Suzuki,2024,11338.05,4763.91,42.02,0.00,2.40,7.68,47
+Central,Michigan,Roxanne Rodriguez,2024,16843.68,5165.80,30.67,1.72,3.56,8.33,48
+West,Washington,Sadie Pawthorne,2024,23415.51,5328.72,22.76,5.04,4.95,8.59,49
+West,California,Sadie Pawthorne,2024,88443.84,14371.26,16.25,12.83,18.70,23.17,50
+East,New York,Chuck Magee,2024,80320.69,19277.58,24.00,10.45,16.98,31.08,51
+East,Ohio,Chuck Magee,2025,24748.01,-7602.90,-30.72,45.86,4.03,-9.20,1
+Central,Texas,Roxanne Rodriguez,2025,41686.15,-5239.65,-12.57,33.67,6.79,-6.34,2
+East,Pennsylvania,Chuck Magee,2025,33066.64,-4184.99,-12.66,42.86,5.39,-5.06,3
+Central,Illinois,Roxanne Rodriguez,2025,21033.72,-2809.09,-13.36,36.34,3.43,-3.40,4
+West,Arizona,Sadie Pawthorne,2025,6242.02,-1485.11,-23.79,39.54,1.02,-1.80,5
+West,Colorado,Sadie Pawthorne,2025,10666.74,-1389.13,-13.02,33.44,1.74,-1.68,6
+West,Oregon,Sadie Pawthorne,2025,5450.84,-565.85,-10.38,33.23,0.89,-0.68,7
+South,Florida,Fred Suzuki,2025,13603.28,-471.87,-3.47,30.91,2.22,-0.57,8
+South,Tennessee,Fred Suzuki,2025,3130.49,-163.30,-5.22,32.63,0.51,-0.20,9
+East,Quebec,Chuck Magee,2025,333.82,-72.46,-21.71,42.81,0.05,-0.09,10
+East,Nova Scotia,Chuck Magee,2025,58.36,-24.80,-42.50,60.00,0.01,-0.03,11
+East,New Brunswick,Chuck Magee,2025,56.42,-18.54,-32.85,53.17,0.01,-0.02,12
+West,Saskatchewan,Sadie Pawthorne,2025,63.97,19.99,31.25,20.00,0.01,0.02,13
+West,New Mexico,Sadie Pawthorne,2025,64.08,24.95,38.94,12.22,0.01,0.03,14
+West,British Columbia,Sadie Pawthorne,2025,127.58,32.24,25.27,13.42,0.02,0.04,15
+East,Newfoundland and Labrador,Chuck Magee,2025,99.12,35.41,35.73,0.00,0.02,0.04,16
+East,District of Columbia,Chuck Magee,2025,117.07,50.21,42.89,0.00,0.02,0.06,17
+South,Louisiana,Fred Suzuki,2025,262.76,88.27,33.59,0.00,0.04,0.11,18
+West,Wyoming,Sadie Pawthorne,2025,1603.14,100.20,6.25,20.00,0.26,0.12,19
+Central,Manitoba,Roxanne Rodriguez,2025,1175.31,137.59,11.71,20.00,0.19,0.17,20
+South,South Carolina,Fred Suzuki,2025,502.48,144.10,28.68,0.00,0.08,0.17,21
+East,Prince Edward Island,Chuck Magee,2025,540.93,165.28,30.55,4.00,0.09,0.20,22
+East,Maine,Chuck Magee,2025,547.33,165.29,30.20,0.00,0.09,0.20,23
+East,New Hampshire,Chuck Magee,2025,933.58,216.91,23.23,0.00,0.15,0.26,24
+West,Alberta,Sadie Pawthorne,2025,1297.07,219.17,16.90,14.99,0.21,0.27,25
+Central,Kansas,Roxanne Rodriguez,2025,691.06,230.85,33.40,0.00,0.11,0.28,26
+South,North Carolina,Fred Suzuki,2025,14967.30,260.84,1.74,26.17,2.44,0.32,27
+West,Idaho,Sadie Pawthorne,2025,1183.49,280.35,23.69,0.79,0.19,0.34,28
+Central,Iowa,Roxanne Rodriguez,2025,959.31,308.08,32.11,0.00,0.16,0.37,29
+East,Ontario,Chuck Magee,2025,975.39,376.14,38.56,2.05,0.16,0.46,30
+Central,Minnesota,Roxanne Rodriguez,2025,1527.38,404.47,26.48,0.00,0.25,0.49,31
+West,Utah,Sadie Pawthorne,2025,1822.41,577.36,31.68,0.57,0.30,0.70,32
+East,Vermont,Chuck Magee,2025,2967.06,789.08,26.59,0.00,0.48,0.95,33
+Central,Nebraska,Roxanne Rodriguez,2025,3081.42,854.43,27.73,0.00,0.50,1.03,34
+East,Connecticut,Chuck Magee,2025,3998.49,859.25,21.49,1.91,0.65,1.04,35
+South,Arkansas,Fred Suzuki,2025,2224.19,914.59,41.12,0.00,0.36,1.11,36
+East,Delaware,Chuck Magee,2025,2719.72,976.71,35.91,0.00,0.44,1.18,37
+East,Maryland,Chuck Magee,2025,4709.56,1051.74,22.33,6.71,0.77,1.27,38
+East,Massachusetts,Chuck Magee,2025,3965.26,1058.28,26.69,6.19,0.65,1.28,39
+South,Kentucky,Fred Suzuki,2025,5102.89,1216.66,23.84,0.00,0.83,1.47,40
+Central,Missouri,Roxanne Rodriguez,2025,4221.11,1365.86,32.36,0.00,0.69,1.65,41
+South,Mississippi,Fred Suzuki,2025,5416.78,1475.68,27.24,0.00,0.88,1.79,42
+Central,Oklahoma,Roxanne Rodriguez,2025,8009.79,1677.10,20.94,0.00,1.30,2.03,43
+West,Nevada,Sadie Pawthorne,2025,9081.27,2293.25,25.25,16.35,1.48,2.77,44
+South,Alabama,Fred Suzuki,2025,7651.33,2839.93,37.12,0.00,1.25,3.44,45
+South,Georgia,Fred Suzuki,2025,14057.67,3546.43,25.23,0.00,2.29,4.29,46
+Central,Wisconsin,Roxanne Rodriguez,2025,13337.62,3729.48,27.96,0.00,2.17,4.51,47
+West,Washington,Sadie Pawthorne,2025,19814.28,4209.88,21.25,10.17,3.23,5.09,48
+East,New Jersey,Chuck Magee,2025,17983.39,4947.02,27.51,0.99,2.93,5.98,49
+East,Rhode Island,Chuck Magee,2025,13085.60,5160.04,39.43,0.00,2.13,6.24,50
+South,Virginia,Fred Suzuki,2025,26691.05,7851.47,29.42,0.00,4.35,9.50,51
+Central,Michigan,Roxanne Rodriguez,2025,27420.04,8992.52,32.80,0.44,4.47,10.88,52
+Central,Indiana,Roxanne Rodriguez,2025,25461.78,10385.13,40.79,0.00,4.15,12.56,53
+East,New York,Chuck Magee,2025,71844.10,16654.95,23.18,9.18,11.70,20.15,54
+West,California,Sadie Pawthorne,2025,131551.91,20005.72,15.21,13.73,21.43,24.20,55
+Central,Texas,Roxanne Rodriguez,2026,43421.76,-8838.50,-20.36,42.96,5.82,-9.21,1
+Central,Illinois,Roxanne Rodriguez,2026,24351.61,-6745.56,-27.70,48.36,3.27,-7.03,2
+East,Pennsylvania,Chuck Magee,2026,42688.31,-5112.80,-11.98,34.03,5.73,-5.33,3
+South,North Carolina,Fred Suzuki,2026,23456.83,-5088.53,-21.69,42.61,3.15,-5.30,4
+West,Colorado,Sadie Pawthorne,2026,10299.81,-4435.85,-43.07,48.08,1.38,-4.62,5
+South,Tennessee,Fred Suzuki,2026,16113.82,-3304.29,-20.51,38.96,2.16,-3.44,6
+East,Ohio,Chuck Magee,2026,23264.85,-1736.53,-7.46,35.09,3.12,-1.81,7
+West,Arizona,Sadie Pawthorne,2026,11133.54,-1276.00,-11.46,35.97,1.49,-1.33,8
+West,Oregon,Sadie Pawthorne,2026,2886.59,-377.13,-13.06,37.24,0.39,-0.39,9
+East,New Brunswick,Chuck Magee,2026,56.42,-18.54,-32.85,53.17,0.01,-0.02,10
+West,British Columbia,Sadie Pawthorne,2026,1194.36,-4.01,-0.34,19.07,0.16,0.00,11
+East,Nova Scotia,Chuck Magee,2026,132.71,-1.57,-1.18,44.43,0.02,0.00,12
+West,Saskatchewan,Sadie Pawthorne,2026,68.43,8.55,12.49,20.00,0.01,0.01,13
+Central,Manitoba,Roxanne Rodriguez,2026,755.47,21.35,2.83,30.25,0.10,0.02,14
+East,District of Columbia,Chuck Magee,2026,77.76,35.06,45.09,0.00,0.01,0.04,15
+East,Newfoundland and Labrador,Chuck Magee,2026,198.24,70.83,35.73,0.00,0.03,0.07,16
+East,Prince Edward Island,Chuck Magee,2026,543.96,164.68,30.27,4.11,0.07,0.17,17
+East,West Virginia,Chuck Magee,2026,1209.82,185.92,15.37,19.26,0.16,0.19,18
+West,Idaho,Sadie Pawthorne,2026,1233.55,199.01,16.13,6.16,0.17,0.21,19
+Central,North Dakota,Roxanne Rodriguez,2026,919.91,230.15,25.02,0.00,0.12,0.24,20
+South,Florida,Fred Suzuki,2026,26444.72,244.13,0.92,24.61,3.55,0.25,21
+East,Quebec,Chuck Magee,2026,953.75,263.12,27.59,15.80,0.13,0.27,22
+Central,Kansas,Roxanne Rodriguez,2026,733.15,263.36,35.92,0.00,0.10,0.27,23
+East,Vermont,Chuck Magee,2026,842.21,263.98,31.34,0.00,0.11,0.28,24
+Central,Iowa,Roxanne Rodriguez,2026,716.41,275.86,38.51,0.00,0.10,0.29,25
+South,South Carolina,Fred Suzuki,2026,1560.75,294.64,18.88,0.00,0.21,0.31,26
+West,Nevada,Sadie Pawthorne,2026,3138.16,305.19,9.73,8.77,0.42,0.32,27
+Central,South Dakota,Roxanne Rodriguez,2026,1153.41,346.07,30.00,0.00,0.15,0.36,28
+East,Ontario,Chuck Magee,2026,1599.05,371.35,23.22,13.14,0.21,0.39,29
+East,Rhode Island,Chuck Magee,2026,3427.11,467.41,13.64,9.90,0.46,0.49,30
+West,Utah,Sadie Pawthorne,2026,2460.64,477.17,19.39,6.14,0.33,0.50,31
+East,New Hampshire,Chuck Magee,2026,1509.43,480.21,31.81,0.00,0.20,0.50,32
+South,Alabama,Fred Suzuki,2026,1828.25,496.38,27.15,0.00,0.25,0.52,33
+West,New Mexico,Sadie Pawthorne,2026,2818.56,827.39,29.36,2.57,0.38,0.86,34
+Central,Nebraska,Roxanne Rodriguez,2026,3579.35,921.03,25.73,0.00,0.48,0.96,35
+South,Arkansas,Fred Suzuki,2026,2707.64,959.40,35.43,0.00,0.36,1.00,36
+South,Mississippi,Fred Suzuki,2026,2997.24,1028.56,34.32,0.00,0.40,1.07,37
+South,Louisiana,Fred Suzuki,2026,5501.55,1212.90,22.05,0.00,0.74,1.26,38
+West,Montana,Sadie Pawthorne,2026,4229.28,1465.93,34.66,0.00,0.57,1.53,39
+East,Connecticut,Chuck Magee,2026,5307.21,1479.76,27.88,0.00,0.71,1.54,40
+Central,Wisconsin,Roxanne Rodriguez,2026,5567.47,1523.08,27.36,0.00,0.75,1.59,41
+West,Alberta,Sadie Pawthorne,2026,6849.88,1611.31,23.52,3.99,0.92,1.68,42
+East,Massachusetts,Chuck Magee,2026,8143.08,1710.59,21.01,9.59,1.09,1.78,43
+Central,Missouri,Roxanne Rodriguez,2026,9350.80,1733.43,18.54,0.00,1.25,1.81,44
+Central,Oklahoma,Roxanne Rodriguez,2026,6225.91,1754.75,28.18,0.00,0.84,1.83,45
+South,Virginia,Fred Suzuki,2026,7600.20,1806.01,23.76,0.00,1.02,1.88,46
+East,New Jersey,Chuck Magee,2026,9483.55,2266.07,23.89,0.00,1.27,2.36,47
+Central,Minnesota,Roxanne Rodriguez,2026,6728.25,2459.88,36.56,0.00,0.90,2.56,48
+East,Maryland,Chuck Magee,2026,9451.60,2780.61,29.42,0.00,1.27,2.90,49
+South,Kentucky,Fred Suzuki,2026,15534.84,4751.72,30.59,0.00,2.08,4.95,50
+Central,Indiana,Roxanne Rodriguez,2026,18516.45,5139.53,27.76,0.00,2.48,5.36,51
+East,Delaware,Chuck Magee,2026,13754.98,6053.20,44.01,0.96,1.84,6.31,52
+South,Georgia,Fred Suzuki,2026,19160.02,6447.98,33.65,0.00,2.57,6.72,53
+Central,Michigan,Roxanne Rodriguez,2026,25833.65,8487.76,32.86,1.48,3.46,8.85,54
+West,Washington,Sadie Pawthorne,2026,65539.90,17256.78,26.33,7.42,8.79,17.99,55
+East,New York,Chuck Magee,2026,93923.00,24357.07,25.93,8.40,12.60,25.39,56
+West,California,Sadie Pawthorne,2026,146388.34,29366.46,20.06,12.95,19.63,30.61,57

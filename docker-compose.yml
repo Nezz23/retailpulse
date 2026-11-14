@@ -1,0 +1,11 @@
+# Postgres + the full pipeline. Extracts land in ./data/tableau on the host.
+services:
+  db:
+    image: postgres:17
+    environment: {POSTGRES_DB: retailpulse, POSTGRES_PASSWORD: postgres}
+    healthcheck: {test: pg_isready -U postgres, interval: 5s, retries: 10}
+  pipeline:
+    build: .
+    environment: {DATABASE_URL: "postgresql://postgres:postgres@db:5432/retailpulse"}
+    volumes: ["./data:/app/data", "./results:/app/results", "./tableau:/app/tableau"]
+    depends_on: {db: {condition: service_healthy}}
