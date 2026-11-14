@@ -1,0 +1,147 @@
+{
+  "method": {
+    "superstore": "robust STL residual, monthly, robust z",
+    "uci": "same weekday, trailing 8 weeks, robust z",
+    "severity": {
+      "severe": "|z| >= 6.0",
+      "high": "|z| >= 5.0",
+      "moderate": "|z| >= 4.0"
+    }
+  },
+  "note": "Context lists what moved with each anomaly. It is not a diagnosed cause.",
+  "counts": {
+    "superstore:moderate": 2,
+    "superstore:severe": 1,
+    "uci:high": 2,
+    "uci:moderate": 2,
+    "uci:severe": 1
+  },
+  "anomalies": [
+    {
+      "source": "superstore",
+      "metric": "revenue",
+      "period": "2023-02-01",
+      "actual": 4519.892,
+      "expected": 12403.3407,
+      "z": -4.54,
+      "severity": "moderate",
+      "context": {
+        "note": "no same month a year earlier to compare with"
+      }
+    },
+    {
+      "source": "superstore",
+      "metric": "margin",
+      "period": "2023-03-01",
+      "actual": 0.0122,
+      "expected": 0.2403,
+      "z": -4.76,
+      "severity": "moderate",
+      "context": {
+        "note": "no same month a year earlier to compare with"
+      }
+    },
+    {
+      "source": "superstore",
+      "metric": "margin",
+      "period": "2024-01-01",
+      "actual": -0.1728,
+      "expected": 0.164,
+      "z": -7.02,
+      "severity": "severe",
+      "context": {
+        "vs": "2023-01-01",
+        "largest_sales_changes": {
+          "Tables": 5085.19,
+          "Machines": 3107.98,
+          "Storage": -2478.12
+        },
+        "largest_profit_changes": {
+          "Tables": -2232.14,
+          "Chairs": -1128.09,
+          "Phones": -735.0
+        }
+      }
+    },
+    {
+      "source": "uci",
+      "metric": "net_revenue",
+      "period": "2010-12-19",
+      "actual": 7270.87,
+      "expected": 29315.66,
+      "z": -5.22,
+      "severity": "high",
+      "context": {
+        "within_3_days_of_known_closure": false,
+        "invoices": 23,
+        "cancelled_value": -17.6,
+        "largest_invoice_share_pct": 28.3,
+        "largest_invoice_country": "United Kingdom"
+      }
+    },
+    {
+      "source": "uci",
+      "metric": "net_revenue",
+      "period": "2010-12-22",
+      "actual": 4791.17,
+      "expected": 46793.63,
+      "z": -7.89,
+      "severity": "severe",
+      "context": {
+        "within_3_days_of_known_closure": true,
+        "invoices": 16,
+        "cancelled_value": -65.4,
+        "largest_invoice_share_pct": 13.6,
+        "largest_invoice_country": "United Kingdom"
+      }
+    },
+    {
+      "source": "uci",
+      "metric": "net_revenue",
+      "period": "2010-12-23",
+      "actual": 10942.49,
+      "expected": 48386.96,
+      "z": -5.15,
+      "severity": "high",
+      "context": {
+        "within_3_days_of_known_closure": true,
+        "invoices": 27,
+        "cancelled_value": -279.8,
+        "largest_invoice_share_pct": 40.9,
+        "largest_invoice_country": "United Kingdom"
+      }
+    },
+    {
+      "source": "uci",
+      "metric": "net_revenue",
+      "period": "2011-01-04",
+      "actual": 14289.28,
+      "expected": 53691.88,
+      "z": -4.59,
+      "severity": "moderate",
+      "context": {
+        "within_3_days_of_known_closure": true,
+        "invoices": 36,
+        "cancelled_value": -1035.6,
+        "largest_invoice_share_pct": 22.4,
+        "largest_invoice_country": "United Kingdom"
+      }
+    },
+    {
+      "source": "uci",
+      "metric": "net_revenue",
+      "period": "2011-01-16",
+      "actual": 6848.44,
+      "expected": 27611.93,
+      "z": -4.09,
+      "severity": "moderate",
+      "context": {
+        "within_3_days_of_known_closure": false,
+        "invoices": 25,
+        "cancelled_value": -125.45,
+        "largest_invoice_share_pct": 12.6,
+        "largest_invoice_country": "United Kingdom"
+      }
+    }
+  ]
+}
