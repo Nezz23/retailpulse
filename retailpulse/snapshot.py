@@ -20,6 +20,7 @@ QUERIES = {
         WHERE extract(year FROM order_date) = (SELECT max(extract(year FROM order_date)) FROM analytics.sales_wide)""",
     # UCI Online Retail II (real): one row per trading day
     "uci_daily": "SELECT * FROM uci.daily_sales ORDER BY day",
+    "uci_ingest_log": "SELECT * FROM uci.ingest_log ORDER BY batch_id",
 }
 
 
