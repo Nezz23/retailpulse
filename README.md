@@ -6,7 +6,7 @@
 
 **Live dashboard:** [RetailPulse Executive Overview on Tableau Public](https://public.tableau.com/app/profile/neha.kothavade/viz/RetailPulse_ExecutiveOverview_approved/ExecutiveOverview)
 
-**Decision app (Streamlit):** `streamlit run streamlit_app.py` runs it locally. [Deploy](#deployment) covers Streamlit Community Cloud.
+**Live decision app (Streamlit):** [retailpulse9030.streamlit.app](https://retailpulse9030.streamlit.app/) · six pages, including an interactive discount simulator.
 
 > A second, **real** source sits alongside the synthetic one: **UCI Online Retail II**, 1.07M invoice lines from a UK
 > online retailer, 2009–2011. It powers the demand forecast and daily anomaly detection. It has no cost data, so no
