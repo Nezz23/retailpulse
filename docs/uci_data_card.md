@@ -10,7 +10,8 @@ two are never mixed in one metric.
 | License | CC BY 4.0 |
 | File | `online_retail_ii.zip` (one `.xlsx`, one sheet per year) · SHA-256 `572e3627…e408e67bfb`, verified on every read |
 | Coverage | 2009-12-01 07:45 to 2011-12-09 12:50. **The last day is partial.** |
-| Rows | 1,067,371 invoice lines, 8 columns |
+| Rows | 1,067,371 invoice lines, 8 columns; 1,033,036 after exact duplicates are rejected |
+| Currency | GBP (£) |
 | **Not in the data** | Cost, margin, profit, discounts, returns reasons. **No profitability is derived from this source.** |
 
 ## What profiling found (`retailpulse/uci.py`)
@@ -22,7 +23,7 @@ two are never mixed in one metric.
 | Bad-debt adjustments (invoice starts with `A`) | 6 | Excluded from revenue |
 | Lines with quantity ≤ 0 | 22,950 | Mostly cancellations; the rest are stock write-offs with price 0 |
 | Lines with price ≤ 0 | 6,207 | Excluded from revenue (write-offs, samples) |
-| Non-product stock codes: `POST`, `DOT`, `M`, `C2`, `D`, `BANK CHARGES`, `AMAZONFEE`, … | ≈5,900 | Excluded from product revenue; product codes start with 5 digits |
+| Non-product stock codes: `POST`, `DOT`, `M`, `C2`, `D`, `BANK CHARGES`, `AMAZONFEE`, … | 5,980 (after duplicates) | Excluded from product revenue; product codes start with 5 digits |
 | Missing customer ID | 243,007 | Kept for revenue; excluded from any customer-level metric |
 | Countries | 43 | 91.9% of lines are UK |
 
@@ -37,3 +38,20 @@ two are never mixed in one metric.
 
 The data stops in 2011. Incremental loading **replays** it in date order, one batch at a time, so that the
 duplicate-prevention, validation and logging logic gets exercised. It is not a live feed from a running store.
+
+```bash
+python -m retailpulse.ingest --days 7              # load the next week after the last successful batch
+python -m retailpulse.ingest --through 2011-12-09  # catch up to the end of the data
+# scheduled, e.g. every Monday 06:00 (crontab -e):
+0 6 * * 1  cd /path/to/RetailPulse && .venv/bin/python -m retailpulse.ingest --days 7 >> logs/ingest.log 2>&1
+```
+
+| Guarantee | Mechanism |
+|---|---|
+| **No duplicates** | A unique key over all 8 fields, with `ON CONFLICT DO NOTHING`. Re-running a window loads 0 rows. |
+| **All or nothing** | Each batch runs in one transaction; a failed batch keeps no rows. |
+| **Restartable** | The watermark is the end of the last *successful* batch, so after a failure the next run retries the same window. |
+| **Auditable** | Every batch, failed or not, gets a row in `uci.ingest_log`: window, rows in, rows rejected (missing required fields), duplicates, new rows, error. |
+
+Full replay: 4 batches, 34,335 duplicates rejected (exactly the number profiling found), 0 rows rejected,
+1,033,036 lines loaded. Net product revenue £18.93M across 604 trading days.
