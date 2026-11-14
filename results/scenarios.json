@@ -1,0 +1,768 @@
+{
+  "note": "Thresholds are observed associations; cap scenarios are modeled estimates, not realized savings. Data is synthetic (Tableau Sample Superstore).",
+  "year": 2026,
+  "baseline": {
+    "revenue": 745567.53,
+    "profit": 95926.35,
+    "margin_pct": 12.87
+  },
+  "thresholds_by_category": [
+    {
+      "category": "Furniture",
+      "max_profitable_discount": 0.2,
+      "loss_threshold_discount": 0.3,
+      "profit_on_loss_lines": -61663.12
+    },
+    {
+      "category": "Office Supplies",
+      "max_profitable_discount": 0.2,
+      "loss_threshold_discount": 0.7,
+      "profit_on_loss_lines": -56783.83
+    },
+    {
+      "category": "Technology",
+      "max_profitable_discount": 0.2,
+      "loss_threshold_discount": 0.4,
+      "profit_on_loss_lines": -38579.92
+    }
+  ],
+  "thresholds_by_sub_category": [
+    {
+      "sub_category": "Binders",
+      "max_profitable_discount": 0.2,
+      "loss_threshold_discount": 0.7,
+      "profit_on_loss_lines": -38563.49
+    },
+    {
+      "sub_category": "Tables",
+      "max_profitable_discount": 0.0,
+      "loss_threshold_discount": 0.2,
+      "profit_on_loss_lines": -32503.66
+    },
+    {
+      "sub_category": "Machines",
+      "max_profitable_discount": 0.2,
+      "loss_threshold_discount": 0.7,
+      "profit_on_loss_lines": -30118.67
+    },
+    {
+      "sub_category": "Bookcases",
+      "max_profitable_discount": 0.2,
+      "loss_threshold_discount": 0.32,
+      "profit_on_loss_lines": -12349.81
+    },
+    {
+      "sub_category": "Chairs",
+      "max_profitable_discount": 0.2,
+      "loss_threshold_discount": 0.3,
+      "profit_on_loss_lines": -10122.98
+    },
+    {
+      "sub_category": "Appliances",
+      "max_profitable_discount": 0.2,
+      "loss_threshold_discount": 0.8,
+      "profit_on_loss_lines": -8629.64
+    },
+    {
+      "sub_category": "Phones",
+      "max_profitable_discount": 0.2,
+      "loss_threshold_discount": 0.4,
+      "profit_on_loss_lines": -7530.62
+    },
+    {
+      "sub_category": "Furnishings",
+      "max_profitable_discount": 0.2,
+      "loss_threshold_discount": 0.6,
+      "profit_on_loss_lines": -6686.68
+    },
+    {
+      "sub_category": "Storage",
+      "max_profitable_discount": 0.0,
+      "loss_threshold_discount": 0.2,
+      "profit_on_loss_lines": -6480.22
+    },
+    {
+      "sub_category": "Supplies",
+      "max_profitable_discount": 0.0,
+      "loss_threshold_discount": 0.2,
+      "profit_on_loss_lines": -3015.62
+    },
+    {
+      "sub_category": "Accessories",
+      "max_profitable_discount": 0.2,
+      "loss_threshold_discount": null,
+      "profit_on_loss_lines": -930.63
+    },
+    {
+      "sub_category": "Fasteners",
+      "max_profitable_discount": 0.2,
+      "loss_threshold_discount": null,
+      "profit_on_loss_lines": -33.2
+    },
+    {
+      "sub_category": "Labels",
+      "max_profitable_discount": 0.2,
+      "loss_threshold_discount": null,
+      "profit_on_loss_lines": -31.39
+    },
+    {
+      "sub_category": "Art",
+      "max_profitable_discount": 0.2,
+      "loss_threshold_discount": null,
+      "profit_on_loss_lines": -23.98
+    },
+    {
+      "sub_category": "Paper",
+      "max_profitable_discount": 0.2,
+      "loss_threshold_discount": null,
+      "profit_on_loss_lines": -6.3
+    },
+    {
+      "sub_category": "Envelopes",
+      "max_profitable_discount": 0.2,
+      "loss_threshold_discount": null,
+      "profit_on_loss_lines": 0.0
+    },
+    {
+      "sub_category": "Copiers",
+      "max_profitable_discount": 0.2,
+      "loss_threshold_discount": null,
+      "profit_on_loss_lines": 0.0
+    }
+  ],
+  "vulnerable_products": [
+    {
+      "product_name": "Cubify CubeX 3D Printer Double Head Print",
+      "sub_category": "Machines",
+      "deep_lines": 2,
+      "deep_sales": 6299.98,
+      "deep_profit": -9239.97
+    },
+    {
+      "product_name": "GBC DocuBind P400 Electric Binding System",
+      "sub_category": "Binders",
+      "deep_lines": 3,
+      "deep_sales": 4899.56,
+      "deep_profit": -6859.39
+    },
+    {
+      "product_name": "Lexmark MX611dhe Monochrome Laser Printer",
+      "sub_category": "Machines",
+      "deep_lines": 3,
+      "deep_sales": 13769.92,
+      "deep_profit": -5269.97
+    },
+    {
+      "product_name": "GBC Ibimaster 500 Manual ProClick Binding System",
+      "sub_category": "Binders",
+      "deep_lines": 6,
+      "deep_sales": 6696.62,
+      "deep_profit": -5098.57
+    },
+    {
+      "product_name": "GBC DocuBind TL300 Electric Binding System",
+      "sub_category": "Binders",
+      "deep_lines": 4,
+      "deep_sales": 4395.25,
+      "deep_profit": -4162.03
+    },
+    {
+      "product_name": "Cubify CubeX 3D Printer Triple Head Print",
+      "sub_category": "Machines",
+      "deep_lines": 1,
+      "deep_sales": 7999.98,
+      "deep_profit": -3839.99
+    },
+    {
+      "product_name": "Fellowes PB500 Electric Punch Plastic Comb Binding Machine with Manual Bind",
+      "sub_category": "Binders",
+      "deep_lines": 2,
+      "deep_sales": 2287.78,
+      "deep_profit": -3431.67
+    },
+    {
+      "product_name": "Chromcraft Bull-Nose Wood Oval Conference Tables & Bases",
+      "sub_category": "Tables",
+      "deep_lines": 3,
+      "deep_sales": 6942.35,
+      "deep_profit": -3008.35
+    },
+    {
+      "product_name": "Ibico EPK-21 Electric Binding System",
+      "sub_category": "Binders",
+      "deep_lines": 1,
+      "deep_sales": 1889.99,
+      "deep_profit": -2929.48
+    },
+    {
+      "product_name": "Bush Advantage Collection Racetrack Conference Table",
+      "sub_category": "Tables",
+      "deep_lines": 6,
+      "deep_sales": 6151.04,
+      "deep_profit": -2545.26
+    }
+  ],
+  "blanket_caps": [
+    {
+      "cap": 0.1,
+      "demand_loss": 0.0,
+      "lines_capped": 1721,
+      "capped_lines_baseline_profit": -14001.67,
+      "only_loss_making_levels": false,
+      "revenue": 872104.32,
+      "profit": 222463.13,
+      "margin_pct": 25.51,
+      "revenue_change": 126536.79,
+      "profit_change": 126536.79,
+      "margin_change_pp": 12.64
+    },
+    {
+      "cap": 0.1,
+      "demand_loss": 0.1,
+      "lines_capped": 1721,
+      "capped_lines_baseline_profit": -14001.67,
+      "only_loss_making_levels": false,
+      "revenue": 822509.08,
+      "profit": 211209.62,
+      "margin_pct": 25.68,
+      "revenue_change": 76941.55,
+      "profit_change": 115283.27,
+      "margin_change_pp": 12.81
+    },
+    {
+      "cap": 0.1,
+      "demand_loss": 0.25,
+      "lines_capped": 1721,
+      "capped_lines_baseline_profit": -14001.67,
+      "only_loss_making_levels": false,
+      "revenue": 748116.22,
+      "profit": 194329.36,
+      "margin_pct": 25.98,
+      "revenue_change": 2548.68,
+      "profit_change": 98403.01,
+      "margin_change_pp": 13.11
+    },
+    {
+      "cap": 0.1,
+      "demand_loss": 0.5,
+      "lines_capped": 1721,
+      "capped_lines_baseline_profit": -14001.67,
+      "only_loss_making_levels": false,
+      "revenue": 624128.11,
+      "profit": 166195.58,
+      "margin_pct": 26.63,
+      "revenue_change": -121439.42,
+      "profit_change": 70269.23,
+      "margin_change_pp": 13.76
+    },
+    {
+      "cap": 0.1,
+      "demand_loss": 1.0,
+      "lines_capped": 1721,
+      "capped_lines_baseline_profit": -14001.67,
+      "only_loss_making_levels": false,
+      "revenue": 376151.91,
+      "profit": 109928.02,
+      "margin_pct": 29.22,
+      "revenue_change": -369415.62,
+      "profit_change": 14001.67,
+      "margin_change_pp": 16.36
+    },
+    {
+      "cap": 0.15,
+      "demand_loss": 0.0,
+      "lines_capped": 1705,
+      "capped_lines_baseline_profit": -14539.21,
+      "only_loss_making_levels": false,
+      "revenue": 844551.41,
+      "profit": 194910.22,
+      "margin_pct": 23.08,
+      "revenue_change": 98983.87,
+      "profit_change": 98983.87,
+      "margin_change_pp": 10.21
+    },
+    {
+      "cap": 0.15,
+      "demand_loss": 0.1,
+      "lines_capped": 1705,
+      "capped_lines_baseline_profit": -14539.21,
+      "only_loss_making_levels": false,
+      "revenue": 798587.74,
+      "profit": 186465.76,
+      "margin_pct": 23.35,
+      "revenue_change": 53020.2,
+      "profit_change": 90539.41,
+      "margin_change_pp": 10.48
+    },
+    {
+      "cap": 0.15,
+      "demand_loss": 0.25,
+      "lines_capped": 1705,
+      "capped_lines_baseline_profit": -14539.21,
+      "only_loss_making_levels": false,
+      "revenue": 729642.23,
+      "profit": 173799.05,
+      "margin_pct": 23.82,
+      "revenue_change": -15925.3,
+      "profit_change": 77872.71,
+      "margin_change_pp": 10.95
+    },
+    {
+      "cap": 0.15,
+      "demand_loss": 0.5,
+      "lines_capped": 1705,
+      "capped_lines_baseline_profit": -14539.21,
+      "only_loss_making_levels": false,
+      "revenue": 614733.05,
+      "profit": 152687.89,
+      "margin_pct": 24.84,
+      "revenue_change": -130834.48,
+      "profit_change": 56761.54,
+      "margin_change_pp": 11.97
+    },
+    {
+      "cap": 0.15,
+      "demand_loss": 1.0,
+      "lines_capped": 1705,
+      "capped_lines_baseline_profit": -14539.21,
+      "only_loss_making_levels": false,
+      "revenue": 384914.7,
+      "profit": 110465.55,
+      "margin_pct": 28.7,
+      "revenue_change": -360652.83,
+      "profit_change": 14539.21,
+      "margin_change_pp": 15.83
+    },
+    {
+      "cap": 0.2,
+      "demand_loss": 0.0,
+      "lines_capped": 463,
+      "capped_lines_baseline_profit": -47819.1,
+      "only_loss_making_levels": true,
+      "revenue": 817513.95,
+      "profit": 167872.77,
+      "margin_pct": 20.53,
+      "revenue_change": 71946.42,
+      "profit_change": 71946.42,
+      "margin_change_pp": 7.67
+    },
+    {
+      "cap": 0.2,
+      "demand_loss": 0.1,
+      "lines_capped": 463,
+      "capped_lines_baseline_profit": -47819.1,
+      "only_loss_making_levels": true,
+      "revenue": 799507.48,
+      "profit": 165460.04,
+      "margin_pct": 20.7,
+      "revenue_change": 53939.95,
+      "profit_change": 69533.69,
+      "margin_change_pp": 7.83
+    },
+    {
+      "cap": 0.2,
+      "demand_loss": 0.25,
+      "lines_capped": 463,
+      "capped_lines_baseline_profit": -47819.1,
+      "only_loss_making_levels": true,
+      "revenue": 772497.77,
+      "profit": 161840.94,
+      "margin_pct": 20.95,
+      "revenue_change": 26930.24,
+      "profit_change": 65914.59,
+      "margin_change_pp": 8.08
+    },
+    {
+      "cap": 0.2,
+      "demand_loss": 0.5,
+      "lines_capped": 463,
+      "capped_lines_baseline_profit": -47819.1,
+      "only_loss_making_levels": true,
+      "revenue": 727481.6,
+      "profit": 155809.11,
+      "margin_pct": 21.42,
+      "revenue_change": -18085.93,
+      "profit_change": 59882.76,
+      "margin_change_pp": 8.55
+    },
+    {
+      "cap": 0.2,
+      "demand_loss": 1.0,
+      "lines_capped": 463,
+      "capped_lines_baseline_profit": -47819.1,
+      "only_loss_making_levels": true,
+      "revenue": 637449.24,
+      "profit": 143745.45,
+      "margin_pct": 22.55,
+      "revenue_change": -108118.29,
+      "profit_change": 47819.1,
+      "margin_change_pp": 9.68
+    },
+    {
+      "cap": 0.25,
+      "demand_loss": 0.0,
+      "lines_capped": 463,
+      "capped_lines_baseline_profit": -47819.1,
+      "only_loss_making_levels": true,
+      "revenue": 806259.91,
+      "profit": 156618.72,
+      "margin_pct": 19.43,
+      "revenue_change": 60692.38,
+      "profit_change": 60692.38,
+      "margin_change_pp": 6.56
+    },
+    {
+      "cap": 0.25,
+      "demand_loss": 0.1,
+      "lines_capped": 463,
+      "capped_lines_baseline_profit": -47819.1,
+      "only_loss_making_levels": true,
+      "revenue": 789378.84,
+      "profit": 155331.4,
+      "margin_pct": 19.68,
+      "revenue_change": 43811.31,
+      "profit_change": 59405.05,
+      "margin_change_pp": 6.81
+    },
+    {
+      "cap": 0.25,
+      "demand_loss": 0.25,
+      "lines_capped": 463,
+      "capped_lines_baseline_profit": -47819.1,
+      "only_loss_making_levels": true,
+      "revenue": 764057.24,
+      "profit": 153400.4,
+      "margin_pct": 20.08,
+      "revenue_change": 18489.71,
+      "profit_change": 57474.06,
+      "margin_change_pp": 7.21
+    },
+    {
+      "cap": 0.25,
+      "demand_loss": 0.5,
+      "lines_capped": 463,
+      "capped_lines_baseline_profit": -47819.1,
+      "only_loss_making_levels": true,
+      "revenue": 721854.57,
+      "profit": 150182.09,
+      "margin_pct": 20.81,
+      "revenue_change": -23712.96,
+      "profit_change": 54255.74,
+      "margin_change_pp": 7.94
+    },
+    {
+      "cap": 0.25,
+      "demand_loss": 1.0,
+      "lines_capped": 463,
+      "capped_lines_baseline_profit": -47819.1,
+      "only_loss_making_levels": true,
+      "revenue": 637449.24,
+      "profit": 143745.45,
+      "margin_pct": 22.55,
+      "revenue_change": -108118.29,
+      "profit_change": 47819.1,
+      "margin_change_pp": 9.68
+    }
+  ],
+  "targeted_caps": {
+    "sub_categories": [
+      "Tables",
+      "Storage",
+      "Supplies"
+    ],
+    "scenarios": [
+      {
+        "cap": 0.1,
+        "demand_loss": 0.0,
+        "lines_capped": 215,
+        "capped_lines_baseline_profit": -13250.23,
+        "only_loss_making_levels": true,
+        "revenue": 766134.84,
+        "profit": 116493.66,
+        "margin_pct": 15.21,
+        "revenue_change": 20567.31,
+        "profit_change": 20567.31,
+        "margin_change_pp": 2.34
+      },
+      {
+        "cap": 0.1,
+        "demand_loss": 0.1,
+        "lines_capped": 215,
+        "capped_lines_baseline_profit": -13250.23,
+        "only_loss_making_levels": true,
+        "revenue": 756863.64,
+        "profit": 115761.95,
+        "margin_pct": 15.29,
+        "revenue_change": 11296.11,
+        "profit_change": 19835.6,
+        "margin_change_pp": 2.43
+      },
+      {
+        "cap": 0.1,
+        "demand_loss": 0.25,
+        "lines_capped": 215,
+        "capped_lines_baseline_profit": -13250.23,
+        "only_loss_making_levels": true,
+        "revenue": 742956.85,
+        "profit": 114664.39,
+        "margin_pct": 15.43,
+        "revenue_change": -2610.68,
+        "profit_change": 18738.04,
+        "margin_change_pp": 2.57
+      },
+      {
+        "cap": 0.1,
+        "demand_loss": 0.5,
+        "lines_capped": 215,
+        "capped_lines_baseline_profit": -13250.23,
+        "only_loss_making_levels": true,
+        "revenue": 719778.85,
+        "profit": 112835.12,
+        "margin_pct": 15.68,
+        "revenue_change": -25788.68,
+        "profit_change": 16908.77,
+        "margin_change_pp": 2.81
+      },
+      {
+        "cap": 0.1,
+        "demand_loss": 1.0,
+        "lines_capped": 215,
+        "capped_lines_baseline_profit": -13250.23,
+        "only_loss_making_levels": true,
+        "revenue": 673422.87,
+        "profit": 109176.58,
+        "margin_pct": 16.21,
+        "revenue_change": -72144.66,
+        "profit_change": 13250.23,
+        "margin_change_pp": 3.35
+      },
+      {
+        "cap": 0.15,
+        "demand_loss": 0.0,
+        "lines_capped": 215,
+        "capped_lines_baseline_profit": -13250.23,
+        "only_loss_making_levels": true,
+        "revenue": 760984.18,
+        "profit": 111342.99,
+        "margin_pct": 14.63,
+        "revenue_change": 15416.64,
+        "profit_change": 15416.64,
+        "margin_change_pp": 1.77
+      },
+      {
+        "cap": 0.15,
+        "demand_loss": 0.1,
+        "lines_capped": 215,
+        "capped_lines_baseline_profit": -13250.23,
+        "only_loss_making_levels": true,
+        "revenue": 752228.05,
+        "profit": 111126.35,
+        "margin_pct": 14.77,
+        "revenue_change": 6660.51,
+        "profit_change": 15200.0,
+        "margin_change_pp": 1.91
+      },
+      {
+        "cap": 0.15,
+        "demand_loss": 0.25,
+        "lines_capped": 215,
+        "capped_lines_baseline_profit": -13250.23,
+        "only_loss_making_levels": true,
+        "revenue": 739093.85,
+        "profit": 110801.39,
+        "margin_pct": 14.99,
+        "revenue_change": -6473.68,
+        "profit_change": 14875.04,
+        "margin_change_pp": 2.13
+      },
+      {
+        "cap": 0.15,
+        "demand_loss": 0.5,
+        "lines_capped": 215,
+        "capped_lines_baseline_profit": -13250.23,
+        "only_loss_making_levels": true,
+        "revenue": 717203.52,
+        "profit": 110259.78,
+        "margin_pct": 15.37,
+        "revenue_change": -28364.01,
+        "profit_change": 14333.44,
+        "margin_change_pp": 2.51
+      },
+      {
+        "cap": 0.15,
+        "demand_loss": 1.0,
+        "lines_capped": 215,
+        "capped_lines_baseline_profit": -13250.23,
+        "only_loss_making_levels": true,
+        "revenue": 673422.87,
+        "profit": 109176.58,
+        "margin_pct": 16.21,
+        "revenue_change": -72144.66,
+        "profit_change": 13250.23,
+        "margin_change_pp": 3.35
+      },
+      {
+        "cap": 0.2,
+        "demand_loss": 0.0,
+        "lines_capped": 59,
+        "capped_lines_baseline_profit": -10742.77,
+        "only_loss_making_levels": true,
+        "revenue": 755833.51,
+        "profit": 106192.33,
+        "margin_pct": 14.05,
+        "revenue_change": 10265.98,
+        "profit_change": 10265.98,
+        "margin_change_pp": 1.18
+      },
+      {
+        "cap": 0.2,
+        "demand_loss": 0.1,
+        "lines_capped": 59,
+        "capped_lines_baseline_profit": -10742.77,
+        "only_loss_making_levels": true,
+        "revenue": 751536.32,
+        "profit": 106240.01,
+        "margin_pct": 14.14,
+        "revenue_change": 5968.79,
+        "profit_change": 10313.66,
+        "margin_change_pp": 1.27
+      },
+      {
+        "cap": 0.2,
+        "demand_loss": 0.25,
+        "lines_capped": 59,
+        "capped_lines_baseline_profit": -10742.77,
+        "only_loss_making_levels": true,
+        "revenue": 745090.53,
+        "profit": 106311.52,
+        "margin_pct": 14.27,
+        "revenue_change": -477.0,
+        "profit_change": 10385.18,
+        "margin_change_pp": 1.4
+      },
+      {
+        "cap": 0.2,
+        "demand_loss": 0.5,
+        "lines_capped": 59,
+        "capped_lines_baseline_profit": -10742.77,
+        "only_loss_making_levels": true,
+        "revenue": 734347.56,
+        "profit": 106430.72,
+        "margin_pct": 14.49,
+        "revenue_change": -11219.97,
+        "profit_change": 10504.37,
+        "margin_change_pp": 1.63
+      },
+      {
+        "cap": 0.2,
+        "demand_loss": 1.0,
+        "lines_capped": 59,
+        "capped_lines_baseline_profit": -10742.77,
+        "only_loss_making_levels": true,
+        "revenue": 712861.61,
+        "profit": 106669.11,
+        "margin_pct": 14.96,
+        "revenue_change": -32705.92,
+        "profit_change": 10742.77,
+        "margin_change_pp": 2.1
+      },
+      {
+        "cap": 0.25,
+        "demand_loss": 0.0,
+        "lines_capped": 59,
+        "capped_lines_baseline_profit": -10742.77,
+        "only_loss_making_levels": true,
+        "revenue": 753147.77,
+        "profit": 103506.58,
+        "margin_pct": 13.74,
+        "revenue_change": 7580.24,
+        "profit_change": 7580.24,
+        "margin_change_pp": 0.88
+      },
+      {
+        "cap": 0.25,
+        "demand_loss": 0.1,
+        "lines_capped": 59,
+        "capped_lines_baseline_profit": -10742.77,
+        "only_loss_making_levels": true,
+        "revenue": 749119.15,
+        "profit": 103822.84,
+        "margin_pct": 13.86,
+        "revenue_change": 3551.62,
+        "profit_change": 7896.49,
+        "margin_change_pp": 0.99
+      },
+      {
+        "cap": 0.25,
+        "demand_loss": 0.25,
+        "lines_capped": 59,
+        "capped_lines_baseline_profit": -10742.77,
+        "only_loss_making_levels": true,
+        "revenue": 743076.23,
+        "profit": 104297.22,
+        "margin_pct": 14.04,
+        "revenue_change": -2491.3,
+        "profit_change": 8370.87,
+        "margin_change_pp": 1.17
+      },
+      {
+        "cap": 0.25,
+        "demand_loss": 0.5,
+        "lines_capped": 59,
+        "capped_lines_baseline_profit": -10742.77,
+        "only_loss_making_levels": true,
+        "revenue": 733004.69,
+        "profit": 105087.85,
+        "margin_pct": 14.34,
+        "revenue_change": -12562.84,
+        "profit_change": 9161.5,
+        "margin_change_pp": 1.47
+      },
+      {
+        "cap": 0.25,
+        "demand_loss": 1.0,
+        "lines_capped": 59,
+        "capped_lines_baseline_profit": -10742.77,
+        "only_loss_making_levels": true,
+        "revenue": 712861.61,
+        "profit": 106669.11,
+        "margin_pct": 14.96,
+        "revenue_change": -32705.92,
+        "profit_change": 10742.77,
+        "margin_change_pp": 2.1
+      }
+    ]
+  },
+  "recommended": {
+    "blanket": {
+      "rule": "largest profit_change at 25% demand loss among caps touching only loss-making discount levels",
+      "no_regret": true,
+      "cap": 0.2,
+      "demand_loss": 0.25,
+      "lines_capped": 463,
+      "capped_lines_baseline_profit": -47819.1,
+      "only_loss_making_levels": 1.0,
+      "revenue": 772497.77,
+      "profit": 161840.94,
+      "margin_pct": 20.95,
+      "revenue_change": 26930.24,
+      "profit_change": 65914.59,
+      "margin_change_pp": 8.08
+    },
+    "targeted": {
+      "rule": "largest profit_change at 25% demand loss among caps touching only loss-making discount levels",
+      "no_regret": true,
+      "cap": 0.1,
+      "demand_loss": 0.25,
+      "lines_capped": 215,
+      "capped_lines_baseline_profit": -13250.23,
+      "only_loss_making_levels": 1.0,
+      "revenue": 742956.85,
+      "profit": 114664.39,
+      "margin_pct": 15.43,
+      "revenue_change": -2610.68,
+      "profit_change": 18738.04,
+      "margin_change_pp": 2.57
+    }
+  }
+}

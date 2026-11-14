@@ -23,7 +23,31 @@ Revenue is growing but profit is not keeping pace. Leadership's questions, and w
 | How does retention look? | 98.5% of customers order more than once. Quarterly cohorts average **35.7% active four quarters after first purchase**. | Cohort analysis |
 | What should we expect next? | Holt-Winters projects **$735K** of revenue for the next 12 months, but with **~23% monthly error** on the 2026 holdout. **Sep, Nov and Dec run 63–82% above** an average month. | Time-based validation |
 
-**Recommendation:** cap discounts at 20% in Machines, Binders and Tables, and A/B test the cap before rolling it out. Start a price and discount review with the top 20 loss-making products and the three worst states. This follows from the associations above, and a test is how to establish causation.
+**Recommendation:** cap discounts at 20% company-wide, starting with Machines, Binders and Tables, and roll the cap out as a randomized test. Test a tighter cap in Tables, Storage and Supplies, where a 20% discount already loses money. Start a price and discount review with the most exposed products and the three worst states. This follows from the associations above and the modeled scenarios below; a test is how to establish causation.
+
+## Discount optimization and what-if scenarios
+
+Full business case, methodology and risks: **[docs/discount_business_case.md](docs/discount_business_case.md)**.
+
+> The thresholds are observed associations. The dollar figures are **modeled opportunities, not realized savings**.
+> They come from repricing 2026 order lines under stated assumptions, on synthetic data.
+
+| Question | Answer |
+|---|---|
+| Where does discounting stop paying? | Every category is profitable at a 20% discount. Losses start at 30% (Furniture), 40% (Technology) and 70% (Office Supplies). In **Tables, Storage and Supplies**, the 20% level already loses money. |
+| What is at stake? | In 2026, lines discounted above 20% (463 of 3,379) lost **$47.8K**, against total profit of $95.9K. |
+| Which products are most exposed? | High-ticket machines, binding systems and conference tables. The top one, a 3D printer, lost $9.2K on two deep-discount lines. |
+| What would a cap do? | A **20% cap** models **+$47.8K to +$71.9K** profit, and +$65.9K if 25% of the capped volume is lost. Margin moves from 12.87% to 20.5–22.6%. |
+| Why 20% and not 10%? | A 10% cap shows more on paper (+$98.4K at 25% demand loss), but it also caps profitable 15–20% lines. If that capped volume is lost, its gain falls to +$14.0K. A 20% cap only touches discount levels that already lose money, so profit rises whatever share of that volume is lost. |
+
+| Margin by discount level | Modeled profit change by cap and demand loss |
+|---|---|
+| ![](docs/figures/margin_by_discount.png) | ![](docs/figures/cap_scenarios.png) |
+
+**The model.** Lines above the cap are repriced at list × (1 − cap), with unit cost held fixed. A demand-loss share
+L, from 0% to 100%, removes that part of their revenue and cost. The recommendation rule is coded and tested: among
+caps that touch only loss-making discount levels, pick the one with the largest gain at L = 25%. Outputs are in
+`results/scenarios.json` and `scenarios.csv`.
 
 ## Dataset
 
@@ -64,6 +88,8 @@ flowchart LR
   MART --> QC{7 data-quality<br/>assertions}
   MART --> V[analytics: 12 SQL views<br/>KPIs · YoY · rolling · Pareto/ABC ·<br/>margin bridge · RFM · cohorts]
   V --> ST[Statistics<br/>bootstrap · OLS w/ fixed effects ·<br/>Spearman]
+  V --> SC[Discount scenarios<br/>thresholds · cap model ·<br/>demand-loss sensitivity]
+  SC --> BC[results/scenarios.json<br/>docs/discount_business_case.md]
   V --> FC[Forecast<br/>seasonal naive · Holt-Winters · SARIMA<br/>12-month holdout]
   V --> EX[Tableau extracts<br/>data/tableau/*.csv]
   ST & FC --> INS[Evidence-typed insights]
@@ -148,7 +174,7 @@ The selection rule (lowest MAPE) was fixed before the results were seen. The hon
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 createdb retailpulse                        # PostgreSQL 15+; or set DATABASE_URL
 .venv/bin/python -m retailpulse             # download, load, build, analyse, export extracts (~3 s after the download)
-createdb retailpulse_test && .venv/bin/python -m pytest -q   # 20 tests against a real Postgres
+createdb retailpulse_test && .venv/bin/python -m pytest -q   # 28 tests against a real Postgres
 # or: docker compose up                     # Postgres + pipeline in containers
 ```
 
@@ -178,11 +204,12 @@ CI runs them against a PostgreSQL 17 service container and builds the Docker ima
 - **No independent cost data.** `implied_cost` is just `sales − profit`, so shipping, COGS and overhead can't be separated.
 - **Association, not causation.** Deeper discounts may be a *response* to weak products, not their cause. Testing a discount cap is the way to find out.
 - **Returns.** Returned orders keep their recorded sales and profit (the source has no refund amounts). Returns are reported separately.
+- **Modeled scenarios.** The cap results assume fixed unit cost, a uniform demand loss and no basket, halo or competitor effects. They size an opportunity; a controlled test measures it.
 - **Small time series.** 48 monthly points limit the forecast.
 
 ## Future improvements
 
 - Build the remaining dashboards from `dashboard_spec.md` (profitability and revenue leakage, customer and product intelligence).
 - Re-run the pipeline on a real retailer's data with a cost feed (the schema and tests are dataset-agnostic past the loader).
-- Add a designed discount-cap experiment and an uplift analysis.
+- Run the 20% cap as a randomized experiment, and replace the uniform demand-loss assumption with a measured price response.
 - Add a Tableau Hyper extract (`tableauhyperapi`) for faster workbooks.

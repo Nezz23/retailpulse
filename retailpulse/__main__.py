@@ -1,14 +1,15 @@
-"""Run everything in order: pipeline -> statistics -> forecast -> Tableau extracts -> insights -> Tableau docs + starter workbook."""
+"""Run everything in order: pipeline -> statistics -> forecast -> discount scenarios -> Tableau extracts -> insights -> Tableau docs + starter workbook."""
 import json
 import logging
 
-from . import analysis, extracts, forecast, insights, pipeline, tableau
+from . import analysis, extracts, forecast, insights, pipeline, scenarios, tableau
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s %(message)s")
     report = pipeline.run()
     analysis.run()
     forecast.run()
+    scenarios.run()
     counts = extracts.run()
     insights.run()
     tableau.run()
